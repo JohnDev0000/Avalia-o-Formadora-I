@@ -1,13 +1,9 @@
 <?php
-
-
-$paginas = [
-    'Principal' => 'Aluno',
-    'Exercício 1' => 'pimba',
-    'Exercicio 2' => 'pamba',
-    'Exercicio 3' => "tramba"
-
-];
+    $paginas = [
+        'Principal' => 'index',
+        'Exercício 1' => 'exercicio1',
+        'Exercicio 2' => 'exercicio2',
+        'Exercicio 3' => 'exercicio3'];
 ?>
 
 <!DOCTYPE html>
@@ -16,45 +12,71 @@ $paginas = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style type="text/css">
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        header {
-            background-color: #069;
-            padding: 8px 10px;
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #FF6600;
+            padding: 11px 13px;
             text-align: center;
+            color: white;
         }
 
         a {
-            display: inline-block;
+            display: flex;
+            flex-direction: column;
             margin: 0 10px;
-            color: black;
+            color: white;
             font-size: 17px;
         }
+
+        nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
     </style>
 </head>
 <body>
-<h1>Bem-vindo ao AVA Formadora</h1>
-<p>Nome: João Pedro Braga</p>
-<p>Matrícula: 22201613</p>
-<header>
-    <nav>
-        <ul>
-            <?php foreach ($paginas as $key => $value) { ?>
-                <li><a href="<?php echo $value . '.php'; ?>"><?php echo $key; ?></a></li>
-            <?php } ?>
-        </ul>
-        <!--            <ul>-->
-        <!--                <li><a href="index.php">Principal</a></li>-->
-        <!--                <li><a href="exercicio1.php">Exercício 1</a></li>-->
-        <!--                <li><a href="exercicio2.php">Exercício 2</a></li>-->
-        <!--                <li><a href="exercicio3.php">Exercício 3</a></li>-->
-        <!--            </ul>-->
-    </nav>
-</header>
+    <div class="header">
+        <header>
+            <h1>Bem-vindo ao AVA Formadora</h1>
+            <p style="font-weight: bold">Nome: João Pedro Braga</p>
+            <p style="font-weight: bold">Matrícula: 22201613</p>
+            <nav>
+                <ul style="list-style: none">
+                    <?php foreach ($paginas as $key => $value) { ?>
+                        <li>
+                            <a style="text-decoration: none"
+                               href="
+                                    <?php echo $value . '.php'; ?>">
+                                <?php echo $key; ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div>
+        <div>
+
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+
 </body>
 </html>
