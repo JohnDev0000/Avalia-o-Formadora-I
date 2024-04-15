@@ -44,13 +44,27 @@
             justify-content: center;
         }
 
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .d1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
     </style>
 </head>
 <body>
     <div class="header">
         <header>
             <h1>Avaliação Formadora I</h1>
-            <p style="font-weight: bold">Nome: João Pedro Braga</p>
+            <p style="font-weight: bold">Nome: João Pedro Braga Gomes</p>
             <p style="font-weight: bold">Matrícula: 22201613</p>
             <nav>
                 <ul style="list-style: none">
@@ -68,13 +82,19 @@
         </header>
     </div>
 
-    <div>
-        <div>
-
+    <div class="main">
+        <div style="display: flex; flex-direction: column; align-items: center">
+            <img src="images/pimba.png" style="max-width: 200px">
+            *literalmente eu*
         </div>
 
-        <div>
-
+        <div class="d1">
+            <img src="images/logo_unisuam_horizontal_color.png"
+                 style="max-width: 100px; align-items: end">
+            <p>Nome: João Pedro Braga Gomes</p>
+            <p>Matricula: 22201613</p>
+            <p>Curso: Análise e Desenvolvimento de Sistemas</p>
+            <p>4º período</p>
         </div>
     </div>
 
