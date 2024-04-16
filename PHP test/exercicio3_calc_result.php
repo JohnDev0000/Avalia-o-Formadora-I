@@ -26,7 +26,7 @@
                         <li>
                             <a style="text-decoration: none"
                                href="
-                                <?php echo $value . '.php'; ?>">
+                                    <?php echo $value . '.php'; ?>">
                                 <?php echo $key; ?>
                             </a>
                         </li>
@@ -39,17 +39,17 @@
     <div class="main">
         <h1 style="padding-bottom: 20px">Exercício 2</h1>
         <div class="form">
-            <form action="exercicio3_calc_result.php" method="post">
-                <label for="massa">Massa:</label>
-                <input type="number" id="massa" name="massa" step="0.01" required>
-                <label for="volume">Volume:</label>
-                <input type="number" id="volume" name="volume" step="0.01" required>
-                <input type="submit" value="Enviar">
-            </form>
+            <?php
+                $massa = $_POST['massa'];
+                $volume = $_POST['volume'];
+                $densidade = $massa / $volume;
+
+                echo "<p>O valor da Densidade é: $densidade</p>";
+            ?>
 
             <a style="display: flex;
-                justify-content: center;
-                align-items: center;"
+                    justify-content: center;
+                    align-items: center;"
                href="index.php">
                 Voltar
             </a>
