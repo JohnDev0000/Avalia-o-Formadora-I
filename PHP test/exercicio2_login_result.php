@@ -26,7 +26,7 @@
                         <li>
                             <a style="text-decoration: none"
                                href="
-                                    <?php echo $value . '.php'; ?>">
+                                        <?php echo $value . '.php'; ?>">
                                 <?php echo $key; ?>
                             </a>
                         </li>
@@ -39,22 +39,23 @@
     <div class="main">
         <h1 style="padding-bottom: 20px">Exercício 2</h1>
         <div class="form">
-            <form action="exercicio2_login_result.php" method="post">
-                <label for="login">Login:</label>
-                <input type="text" id="login" name="login" placeholder="admin" required>
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="admin" required>
-                <input type="submit" value="Enviar">
-            </form>
+            <?php
+                $login = $_POST['login'];
+                $senha = $_POST['senha'];
 
+                if ($login == 'admin' && $senha == 'admin') {
+                    echo "<p>Usuário Autenticado com Sucesso!</p>";
+                } else {
+                    echo "<p>Falha na autenticação!</p>";
+                }
+            ?>
             <a style="display: flex;
-                justify-content: center;
-                align-items: center;"
+                    justify-content: center;
+                    align-items: center;"
                href="index.php">
                 Voltar
             </a>
         </div>
     </div>
-
 </body>
 </html>

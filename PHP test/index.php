@@ -12,53 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .header {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #FF6600;
-            padding: 11px 13px;
-            text-align: center;
-            color: white;
-        }
-
-        a {
-            display: flex;
-            flex-direction: column;
-            margin: 0 10px;
-            color: white;
-            font-size: 17px;
-        }
-
-        nav ul{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-
-        .main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 100px;
-        }
-
-        .d1 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-    </style>
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
     <div class="header">
