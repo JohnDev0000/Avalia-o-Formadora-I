@@ -56,8 +56,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 10px;
-            padding-bottom: 5px;
+            padding: 10px 10px 5px;
             align-items: center;
         }
 
@@ -79,11 +78,8 @@
             text-decoration: none;
             background-color: #E5E5E5;
             border: 1px solid #4F4F4F;
-            max-width: 25%;
-
+            max-width: 100%;
         }
-
-
     </style>
 </head>
 <body>
@@ -98,7 +94,7 @@
                         <li>
                             <a style="text-decoration: none"
                                href="
-                                    <?php echo $value . '.php'; ?>">
+                                        <?php echo $value . '.php'; ?>">
                                 <?php echo $key; ?>
                             </a>
                         </li>
@@ -111,23 +107,29 @@
     <div class="main">
         <h1 style="padding-bottom: 20px">Exercício 1</h1>
         <div class="form">
-            <form action="exercicio1_form_result.php" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="sobrenome">Sobrenome:</label>
-                <input type="text" id="sobrenome" name="sobrenome" required>
-                <label for="repeticoes">Número de Repetições:</label>
-                <input type="number" id="repeticoes" name="repeticoes" min="1" required>
-                <input type="submit" value="Enviar">
-            </form>
+            <?php
+                $nome = $_POST['nome'];
+                $sobrenome = $_POST['sobrenome'];
+                $repeticoes = $_POST['repeticoes'];
+
+                for ($i = 1; $i <= $repeticoes; $i++) {
+                    if ($i % 2 == 0) {
+                        echo "<p>$i - $sobrenome</p>";
+                    } else {
+                        echo "<p>$i - $nome</p>";
+                    }
+                }
+            ?>
 
             <a style="display: flex;
-                justify-content: center;
-                align-items: center;"
-                href="index.php">
+                    justify-content: center;
+                    align-items: center"
+               class="voltar"
+               href="index.php">
                 Voltar
             </a>
         </div>
     </div>
+
 </body>
 </html>
