@@ -37,7 +37,7 @@
     </div>
 
     <div class="main">
-        <h1 style="padding-bottom: 20px">Exercício 2</h1>
+        <h1 style="padding-bottom: 20px">Exercício 3</h1>
         <div class="form">
             <?php
                 $massa = $_POST['massa'];
